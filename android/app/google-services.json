@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "431980972866",
+    "project_id": "pill-identifier-and-drug-searc",
+    "storage_bucket": "pill-identifier-and-drug-searc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431980972866:android:d2e6565cd1c0fb012816db",
+        "android_client_info": {
+          "package_name": "com.PillIdentifierandDrugList.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0IyHe-Ee4h8W6Xes4gQwRR1N-so5AI7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
