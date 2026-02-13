@@ -68,8 +68,8 @@ android {
         applicationId "com.PillIdentifierandDrugList.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 16
-        versionName "6.0.6"
+        versionCode 18
+        versionName "6.1.0"
     }
 
     signingConfigs {

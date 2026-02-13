@@ -90,7 +90,7 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
       </View>
 
       <View style={styles.footer}>
-        <Text style={styles.footerText}>Version 6.0.6</Text>
+        <Text style={styles.footerText}>Version 6.1.0</Text>
         <Text style={styles.footerText}>© 2025 Pill Identifier and Drug List</Text>
       </View>
     </DrawerContentScrollView>
