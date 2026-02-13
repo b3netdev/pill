@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import AppNavigator from './navigation/AppNavigator';
 import { getDBConnection, resetDatabase, initializeDatabase } from './uitlity/database';
 import mobileAds from 'react-native-google-mobile-ads';
-import Analytics from './analytics/AnalyticsService'; // ✅ add
+import Analytics from './analytics/AnalyticsService'; 
 
 
 const App: React.FC = () => {

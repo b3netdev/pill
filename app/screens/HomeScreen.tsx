@@ -19,6 +19,7 @@ import AdBanner from '../components/AdBanner';
 
 // Define navigation types
 type RootStackParamList = {
+  ScanPill:undefined;
   PillIdentifier: undefined;
   ImprintSearch: undefined;
   DrugSearch: undefined;
@@ -74,6 +75,7 @@ const HomeScreen: React.FC = () => {
 
   const navigateTo = (screen: keyof RootStackParamList) => {
     const screenList = [
+      'ScanPill',
       'PillIdentifier',
       'ImprintSearch',
       'DrugSearch',
@@ -121,6 +123,7 @@ const HomeScreen: React.FC = () => {
 };
 
 const gridItems: { label: string; icon: any; screen: keyof RootStackParamList }[] = [
+  { label: 'Scanner', icon: require('../assets/images/pill-scanner.png'), screen: 'ScanPill' },
   { label: 'Pill Identifier', icon: require('../assets/images/icon-1.png'), screen: 'PillIdentifier' },
   { label: 'Imprint Search', icon: require('../assets/images/icon-2.png'), screen: 'ImprintSearch' },
   //Interaction checker

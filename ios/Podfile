@@ -5,7 +5,7 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
-platform :ios, min_ios_version_supported
+platform :ios, '15.5' 
 prepare_react_native_project!
 
 # ---- RNFirebase / CocoaPods linkage setup ----
@@ -36,7 +36,6 @@ target 'pill' do
   # pod 'GoogleUtilities', :modular_headers => true
   # pod 'FirebaseCoreInternal', :modular_headers => true
   # (Not needed when using `use_frameworks! :linkage => :static`.)
-
   post_install do |installer|
     # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
     react_native_post_install(
@@ -45,5 +44,12 @@ target 'pill' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    
+    # Force all pods to use iOS 15.0 minimum deployment target
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.5'
+      end
+    end
   end
 end

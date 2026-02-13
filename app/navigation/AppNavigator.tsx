@@ -50,8 +50,10 @@ import PrescriptionSaveScreen from '../screens/PrescriptionSaveScreen';
 import PrescriptionCreateScreen from '../screens/PrescriptionCreateScreen';
 import SplashScreen from '../screens/SplashScreen';
 import CustomDrawerContent from '../components/CustomDrawerContent';
+import ScanPill from '../screens/ScanPill';
 
 export type RootStackParamList = {
+  ScanPill:undefined;
   MainDrawer: undefined;
   PillIdentifier: undefined;
   PillList: { imprint: string; color: string; shape: string };
@@ -188,6 +190,17 @@ const AppNavigator: React.FC = () => {
           options={{
             headerTitleAlign: 'center',
             title: 'Pill Identifier',
+            headerStyle: { backgroundColor: '#839fcd' },
+            headerTintColor: '#fff',
+            headerTitleStyle: { fontWeight: 'bold', fontSize: 18 },
+          }}
+        />
+        <Stack.Screen
+          name="ScanPill"
+          component={ScanPill}
+          options={{
+            headerTitleAlign: 'center',
+            title: 'Pill Scanner',
             headerStyle: { backgroundColor: '#839fcd' },
             headerTintColor: '#fff',
             headerTitleStyle: { fontWeight: 'bold', fontSize: 18 },
